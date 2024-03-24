@@ -1,31 +1,40 @@
-Project Overview
-This project aims to optimize hyperparameters for renewable energy forecast models using carbon intensity and percentage renewable energy time series data. The project is structured into five main folders, each serving a specific purpose in the analysis and optimization process.
+# Project Overview
 
-1. Datasets
-The Datasets folder contains three subfolders:
+This project consists of five main folders, each containing different components and functionalities related to carbon intensity prediction and renewable energy forecasting.
 
-Generated_datasets_for_Regressor_Model: This folder stores Mean Squared Error (MSE) data obtained after training LSTM models with different hyperparameter combinations. The hyperparameters include sequence length and scaler type. Data is generated for carbon intensity and percentage renewable energy datasets.
+## 1. Datasets
 
-Generated_time_series_data: Time series data acquired from the Tsfresh library is stored here. The data includes time series features extracted from carbon intensity and percentage renewable energy datasets.
+The `Datasets` folder contains three datasets:
 
-Time_Series_Datasets: This folder contains raw time series datasets for carbon intensity and percentage renewable energy.
+- **Generated_datasets_for_Regressor_Model**: This dataset includes Mean Squared Error (MSE) data obtained after training various datasets using LSTM models. The datasets originate from the `Time_Series_Datasets` folder and encompass carbon intensity and percentage renewable energy data.
 
-2. Proposed Approach
-The Proposed Approach folder includes the trained random forest model and code for hyperparameter optimization. The approach involves extracting time series data using the calculate_and_save_features function from the Tsfresh_data_extraction folder. The extracted data, along with different hyperparameter combinations, serves as input to the pretrained random forest model. The model predicts MSE, and the combination with the lowest MSE is considered optimal. This approach is applied to Air Quality Data.
+- **Generated_time_series_data**: Time series data acquired from the Tsfresh library. This data pertains to carbon intensity and percentage renewable energy.
 
-3. Regression Models
-The Regression_Models folder houses Python files for data preprocessing and model testing:
+- **Time_Series_Datasets**: Time series datasets for carbon intensity and percentage renewable energy.
 
-data_preprocessing.py: This file combines datasets from the Generated_datasets_for_Regressor_Model and Generated_time_series_data folders for training and predicting MSE.
+## 2. Proposed Approach
 
-Testing_on_percentage_renewable_data.ipynb: Utilizes carbon intensity data for training and renewable energy data for testing.
+The `Proposed_Approach` folder encompasses the proposed approach for carbon intensity prediction and renewable energy forecasting. It includes:
 
-Testing_with_wholedata.py: Uses all available datasets for training and testing. The trained random_forest_model.pkl is obtained from this code file.
+- Trained Random Forest Model
+- Code for obtaining time series data using the `calculate_and_save_features` function from the `Tsfresh_data_extraction` folder.
+- Combination of time series data with different hyperparameter combinations (Sequence Length and Scaler Type)
+- Pretrained Random Forest model for predicting MSE
+- Selection of optimal hyperparameters based on the least MSE
 
-4. Standard Approach
-The Standard_Approach folder is dedicated to training LSTM models using various combinations of hyperparameters, including sequence length and scaler type. The results are compared, and the best hyperparameter combination is selected.
+## 3. Regression Models
 
-5. Tsfresh Data Extraction
-This folder defines the time series data extraction function, utilizing the Tsfresh library.
+The `Regression_Models` folder contains three Python files:
 
-Through these organized folders and files, the project implements and evaluates different approaches for optimizing hyperparameters in renewable energy forecast models, contributing to advancements in sustainability and energy efficiency.
+- **data_preprocessing.py**: Prepares datasets from `Generated_datasets_for_Regressor_Model` and `Generated_time_series_data` for training and predicting MSE.
+- **Testing_on_percentage_renewable_data.ipynb**: Uses carbon intensity data for training and renewable energy data for testing.
+- **Testing_with_wholedata.py**: Utilizes all available datasets for training and testing. It also obtains the `random_forest_model.pkl` file.
+
+## 4. Standard Approach
+
+The `Standard_Approach` folder entails the training of an LSTM model using various hyperparameter combinations (Sequence Length and Scaler Type). It compares the results to determine the best hyperparameter combination.
+
+## 5. Tsfresh Data Extraction
+
+The `Tsfresh_data_extraction` folder contains the time series data extraction function, which utilizes the Tsfresh library.
+
