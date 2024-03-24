@@ -6,7 +6,7 @@ This project consists of five main folders, each containing different components
 
 The `Datasets` folder contains three datasets:
 
-- **Generated_datasets_for_Regressor_Model**: This dataset includes Mean Squared Error (MSE) data obtained after training various datasets using LSTM models. The datasets originate from the `Time_Series_Datasets` folder and encompass carbon intensity and percentage renewable energy data.
+- **Generated_datasets_for_Regressor_Model**: This dataset includes Mean Squared Error (MSE) data obtained after training various datasets using LSTM models. The datasets used for training are carbon intensity and percentage renewable energy data which are uploaded in the `Time_Series_Datasets` folder.
 
 - **Generated_time_series_data**: Time series data acquired from the Tsfresh library. This data pertains to carbon intensity and percentage renewable energy.
 
@@ -14,12 +14,10 @@ The `Datasets` folder contains three datasets:
 
 ## 2. Proposed Approach
 
-The `Proposed_Approach` folder encompasses the proposed approach for carbon intensity prediction and renewable energy forecasting. It includes:
+The `Proposed_Approach` folder encompasses the proposed approach for carbon intensity prediction and renewable energy forecasting. The steps of the proposed approach are:
 
-- Trained Random Forest Model
-- Code for obtaining time series data using the `calculate_and_save_features` function from the `Tsfresh_data_extraction` folder.
-- Combination of time series data with different hyperparameter combinations (Sequence Length and Scaler Type)
-- Pretrained Random Forest model for predicting MSE
+- Time series data using the `calculate_and_save_features` function from the `Tsfresh_data_extraction` folder is obtained.
+- Extracted time series data along with different hyperparameter combinations (Sequence Length and Scaler Type) is given as input to the pretrained Random Forest model for predicting MSE.
 - Selection of optimal hyperparameters based on the least MSE
 
 ## 3. Regression Models
@@ -27,8 +25,8 @@ The `Proposed_Approach` folder encompasses the proposed approach for carbon inte
 The `Regression_Models` folder contains three Python files:
 
 - **data_preprocessing.py**: Prepares datasets from `Generated_datasets_for_Regressor_Model` and `Generated_time_series_data` for training and predicting MSE.
-- **Testing_on_percentage_renewable_data.ipynb**: Uses carbon intensity data for training and renewable energy data for testing.
-- **Testing_with_wholedata.py**: Utilizes all available datasets for training and testing. It also obtains the `random_forest_model.pkl` file.
+- **Testing_on_percentage_renewable_data.ipynb**: Uses random forest regressor on carbon intensity data for training and testing is done on renewable energy data.
+- **Testing_with_wholedata.py**: Utilizes all available datasets for training and testing. This file obtaines `random_forest_model.pkl` file.
 
 ## 4. Standard Approach
 
