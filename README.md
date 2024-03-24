@@ -1,6 +1,6 @@
 # Project Overview
 
-This project consists of five main folders, each containing different components and functionalities related to carbon intensity prediction and renewable energy forecasting.
+This project consists of five main folders, each containing different components and functionalities. The primary objective is to forecast the most effective hyperparameters for time series datasets prior to actual training. By doing so, the project contributes to advancements in sustainability and energy efficiency. The project employs LSTM (Long Short-Term Memory) time series models to achieve its goals.
 
 ## 1. Datasets
 
